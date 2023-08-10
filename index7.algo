@@ -1,0 +1,19 @@
+ALGORITHM algorithm_card
+VAR
+    tab:ARRAY_OF INTEGER[N];
+BEGIN
+    insert sort [tab]
+END
+PROCEDURE insert sort (tab:ARRAY_OF INTEGER)
+VAR
+    elt,i,j:INTEGER;
+BEGIN
+    FOR i FROM 0 TO N STEP step  DO
+        elt:= tab[i]
+        j:=i-1
+        WHILE (j>=0 and tab[j]>elt) DO
+            tab(j+1):= tab[j]
+            j:=j-1
+        END_WHILE
+    END_FOR
+END
